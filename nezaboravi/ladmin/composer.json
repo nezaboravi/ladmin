@@ -1,0 +1,14 @@
+{
+    "name": "nezaboravi/ladmin",
+    "description": "Simple admin for laravel 5.4 and bulma css to get you started",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vladimir Nikolic",
+            "email": "nezaboravi@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

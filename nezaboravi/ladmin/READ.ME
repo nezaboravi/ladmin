@@ -1,0 +1,18 @@
+php artisan vendor:publish --tag=migrations
+php artisan vendor:publish --tag=seeds
+composer dump-autoload -o
+php artisan migrate
+php artisan db:seed --class=AdminUsersTableSeeder
+\
+NOW YOU CAN LOGIN AS
+admin@ladmin.com / ladmin
+
+
+
+
+//go and add to kernel.php
+protected $routeMiddleware = [
+         ..... other middlewares ....
+        'admin_auth' => \Nezaboravi\Ladmin\Http\Middleware\AuthenticateAdmin::class,
+        'admin_guest' => \Nezaboravi\Ladmin\Http\Middleware\RedirectIfAdminAuthenticated::class,
+     ];
